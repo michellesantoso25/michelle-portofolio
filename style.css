@@ -410,10 +410,11 @@ h1, h2, h3, h4 {
   box-shadow: 0 16px 35px rgba(90, 75, 125, 0.1);
 }
 
-.project-purple { background: linear-gradient(145deg, #f1eafb, #e9e1f8); }
+.project-sage { background: linear-gradient(145deg, #eef4ee, #d8e5d8); }
 .project-pink { background: linear-gradient(145deg, #fce9f0, #f8dfe9); }
 .project-blue { background: linear-gradient(145deg, #e8f4fc, #dceefa); }
 .project-lilac { background: linear-gradient(145deg, #f0ecfa, #e8e4f7); }
+.project-mint { background: linear-gradient(145deg, #e8f8f2, #d8f3e7); }
 
 .project-top {
   display: flex;
@@ -594,8 +595,38 @@ h1, h2, h3, h4 {
 
 .modal-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 22px;
+}
+
+/* Custom Colors for Buttons */
+#modalGithub {
+  background: var(--text);
+  color: white;
+  border: 1px solid var(--text);
+}
+
+#modalDocs {
+  background: var(--blue-soft);
+  color: #3b6690;
+  border: 1px solid #cce2f5;
+}
+
+#modalDocs:hover {
+  background: #d8eaf8;
+  transform: translateY(-2px);
+}
+
+#modalFigma {
+  background: var(--pink-soft);
+  color: #a04970;
+  border: 1px solid #f7d2e2;
+}
+
+#modalFigma:hover {
+  background: #f8d7e6;
+  transform: translateY(-2px);
 }
 
 /* Contact & Footer */
