@@ -53,6 +53,18 @@ const projectsData = {
     github: null,
     docs: "assets/docs/SiKecilSehat_documentation.pdf",
     figma: "https://www.figma.com/design/Z3bnelW2O7o6yC6rUC2wqp/creative-innovation-kelompok-4?node-id=0-1&p=f&t=jPxE8wtUXvrc5mKP-0"
+  },
+  ReRead: {
+    title: "Re:Read",
+    type: "Group Project · Frontend Developer & Database Manager",
+    tech: ["Flutter", "Dart", "Supabase", "PostgreSQL", "Midtrans"],
+    image: "assets/reread-preview.png",
+    description: "Re:Read is a second-hand book marketplace that connects sellers and buyers safely. Instead of a general marketplace where used books get buried, it's built just for books - with structured search and filters by title, author, genre, condition, and price, plus quality control so buyers know what shape a book is in before they buy. Every user can both sell and buy. Sellers submit listings that go through a review step before they go live, and buyers can add books to a cart and pay online, which helps strangers trade with more trust. The goal is to make used books easier to find and more affordable for students and book lovers, while giving books a second life.",
+    role: "Built the app's code, mainly the frontend in Flutter, and managed the database for books and users.",
+    github: "https://github.com/michellesantoso25/Re-Read",
+    docs: "assets/docs/ReRead_documentation.pdf",
+    docsLabel: "Business Model ↗",
+    figma: "https://www.figma.com/design/k4p26PWZfOKp3bXANOoEy6/Re-Read?node-id=252-726&t=0h26ObhZhXOGxft5-0"
   }
 };
 
@@ -74,7 +86,10 @@ function openModal(projectId) {
   setElemText('modalRole', data.role);
 
   const docsBtn = document.getElementById('modalDocs');
-  if (docsBtn) docsBtn.href = data.docs || '#';
+  if (docsBtn) {
+    docsBtn.href = data.docs || '#';
+    docsBtn.textContent = data.docsLabel || 'Documentation ↗';
+  }
 
   const githubBtn = document.getElementById('modalGithub');
   if (githubBtn) {
